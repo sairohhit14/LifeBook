@@ -1,0 +1,187 @@
+{
+  "users": [
+    {
+      "id": "user_1783207026579_j7dvh",
+      "name": "deekshitha",
+      "email": "gowra.deekshithavini09@gmail.com",
+      "password": "deekshitha",
+      "dob": "2007-06-09",
+      "phone": "",
+      "profilePhoto": "",
+      "legacyKey": "LB-VKR8XR",
+      "createdAt": "2026-07-04T23:17:06.579Z"
+    },
+    {
+      "id": "user_1783207246830_koawh",
+      "name": "bharath",
+      "email": "bharathrajukonduru2007@gmail.com",
+      "password": "bharath",
+      "dob": "2007-04-10",
+      "phone": "+91 8328671315",
+      "profilePhoto": "",
+      "legacyKey": "LB-TWXTRM",
+      "createdAt": "2026-07-04T23:20:46.830Z"
+    }
+  ],
+  "memories": [
+    {
+      "id": "mem_1783207129852_19ea6",
+      "userId": "user_1783207026579_j7dvh",
+      "title": "gagana akka",
+      "description": "📸 [AI Memory Vision: An evocative captured scene filled with joyful smiles, celebrating life's beautiful moments.]",
+      "date": "2026-07-04",
+      "location": "",
+      "tags": [],
+      "media": [
+        {
+          "id": "media_1783207085591_mgksz",
+          "type": "image",
+          "url": "/uploads/file_1783207085586_mhgdc.jpeg",
+          "name": "WhatsApp Image 2026-07-03 at 2.12.44 PM.jpeg"
+        }
+      ],
+      "createdAt": "2026-07-04T23:18:49.852Z"
+    },
+    {
+      "id": "mem_1783207812050_hr8za",
+      "userId": "user_1783207246830_koawh",
+      "title": "FIRST MEMORY WITH MY LITTLE ONE",
+      "description": "📸 [AI Memory Vision: A beautifully framed memory preserved for future generations to look back on with love.]",
+      "date": "2005-12-07",
+      "location": "HOME",
+      "tags": [
+        "CHILD",
+        "FAMILY"
+      ],
+      "media": [
+        {
+          "id": "media_1783207723188_lwy7u",
+          "type": "image",
+          "url": "/uploads/file_1783207723183_woy53.jpg",
+          "name": "family photo.jpg"
+        }
+      ],
+      "createdAt": "2026-07-04T23:30:12.050Z"
+    },
+    {
+      "id": "mem_1783208585879_cttgj",
+      "userId": "user_1783207246830_koawh",
+      "title": "HAPPIEST MOMENT OF MY LIFE",
+      "description": "Enjoying the day with you when u was 2 years old.",
+      "date": "2003-07-11",
+      "location": "VIZAG",
+      "tags": [
+        "TRAVEL"
+      ],
+      "media": [
+        {
+          "id": "media_1783208501048_wsf7z",
+          "type": "video",
+          "url": "/uploads/file_1783208500992_n4qgs.mp4",
+          "name": "WhatsApp Video 2026-07-05 at 5.11.10 AM.mp4"
+        }
+      ],
+      "createdAt": "2026-07-04T23:43:05.879Z"
+    },
+    {
+      "id": "mem_1783208808758_w3i6n",
+      "userId": "user_1783207246830_koawh",
+      "title": "FIRST WORDS I HAVE HEARD FROM MY LITTLE ONE",
+      "description": "I still remember the first words that u spoke for the first time and i feel the same when u talk to me",
+      "date": "2005-07-22",
+      "location": "HOME",
+      "tags": [
+        "FAMILY"
+      ],
+      "media": [
+        {
+          "id": "media_1783208610176_f9471",
+          "type": "audio",
+          "url": "/uploads/file_1783208610162_shl99.m4a",
+          "name": "(Audio) gorgeous-crisp-69b337.netlify.app - Personal - Microsoft_ Edge 2026-04-28 19-35-27.m4a"
+        }
+      ],
+      "createdAt": "2026-07-04T23:46:48.758Z"
+    }
+  ],
+  "milestones": [
+    {
+      "id": "mil_1783209096135_bu2o0",
+      "userId": "user_1783207246830_koawh",
+      "title": "GRADUATION DAY OF MY LITTLE ONE",
+      "description": "\"I still remember the first time I held you in my arms. Today, I watch you step confidently into your future. No words can express how proud I am of the incredible woman you've become. 🎓❤️\"",
+      "date": "2027-02-14",
+      "category": "College",
+      "location": "GITAM UNIVERSITY",
+      "media": [
+        {
+          "id": "med_1783209832150",
+          "type": "image",
+          "url": "/uploads/file_1783208914629_jxo3z.jpg",
+          "name": "graduation.jpg"
+        }
+      ],
+      "createdAt": "2026-07-04T23:51:36.135Z"
+    },
+    {
+      "id": "mil_1783209754731_25o6d",
+      "userId": "user_1783207246830_koawh",
+      "title": "MARRIAGE",
+      "description": "NEWELY MARRIED COUPLE",
+      "date": "2029-03-01",
+      "category": "Marriage",
+      "location": "BURJ KALIFA",
+      "media": [
+        {
+          "id": "med_1783209805198",
+          "type": "image",
+          "url": "/uploads/file_1783209720401_prdhu.jpeg",
+          "name": "WhatsApp Image 2026-07-05 at 5.30.56 AM.jpeg"
+        }
+      ],
+      "createdAt": "2026-07-05T00:02:34.731Z"
+    },
+    {
+      "id": "mil_1783210517545_l0p10",
+      "userId": "user_1783207246830_koawh",
+      "title": "GRANDSON",
+      "description": "\"Seeing my son become a loving father and holding my precious grandchild fills my heart with a happiness beyond words. This little family is the greatest blessing I could ever ask for. May your home always be filled with love, laughter, good health, and endless happiness. Watching generations grow together is life's most beautiful gift.\" ❤️👨‍👩‍👦",
+      "date": "2030-02-14",
+      "category": "Other",
+      "location": "RK BEACH",
+      "media": [
+        {
+          "id": "med_1783210517519",
+          "type": "image",
+          "url": "/uploads/file_1783210304026_1sv38.png",
+          "name": "ChatGPT Image Jul 5, 2026, 05_41_15 AM.png"
+        }
+      ],
+      "createdAt": "2026-07-05T00:15:17.545Z"
+    }
+  ],
+  "messages": [
+    {
+      "id": "msg_1783211627152_k5yf1",
+      "userId": "user_1783207246830_koawh",
+      "title": "BIRTHDAY",
+      "recipientName": "DEEKSHITHA",
+      "recipientEmail": "gowra.deekshithavini09@gmail.com",
+      "deliveryOption": "Birthday",
+      "deliveryDate": "2032-02-14",
+      "deliveryTime": "12:00",
+      "deliveryDateUtc": "2032-02-14T06:30:00.000Z",
+      "type": "video",
+      "content": "Happy Birthday, Deekshitha!\nOn your special day, I want you to know how incredibly proud I am of the person you are and the wonderful journey you're creating. Keep believing in yourself, stay kind, and never stop chasing your dreams. Life will bring both challenges and beautiful moments, but I know you have the strength and courage to overcome anything.\nAlways remember that you are deeply loved, appreciated, and capable of achieving amazing things. May this year bring you happiness, good health, success, and countless reasons to smile.\nWishing you a birthday filled with love, laughter, and unforgettable memories. May all your dreams come true.\nHappy Birthday! 🎉❤️",
+      "mediaUrl": "/uploads/file_1783211495884_pcjd7.mp4",
+      "mediaName": "WhatsApp Video 2026-07-05 at 6.00.52 AM.mp4",
+      "status": "scheduled",
+      "createdAt": "2026-07-05T00:33:47.152Z"
+    }
+  ],
+  "family": [],
+  "documents": [],
+  "stories": [],
+  "notifications": [],
+  "chatHistory": {}
+}
