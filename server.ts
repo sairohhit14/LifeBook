@@ -27,6 +27,17 @@ if (!fs.existsSync(UPLOADS_DIR)) {
 // Serve uploads statically
 app.use("/uploads", express.static(UPLOADS_DIR));
 
+// Error handling middleware for API routes
+app.use((err: any, req: express.Request, res: express.Response, next: express.NextFunction) => {
+  console.error("Server error:", err);
+  // Ensure API routes always return JSON
+  if (req.path.startsWith("/api/")) {
+    res.status(500).json({ error: err.message || "Internal server error" });
+  } else {
+    next(err);
+  }
+});
+
 // Initialize DB if it doesn't exist
 const initialDb = {
   users: [],
