@@ -1,0 +1,30 @@
+mutation CreateSeedData @transaction {
+  user_insertMany(data: [
+    {
+      id: "71e54823-380d-4952-b866-990a424a7375",
+      email: "alice@example.com",
+      fullName: "Alice Smith",
+      createdAt: "2023-10-01T10:00:00Z"
+    },
+    {
+      id: "9c3c6f49-5564-4786-9a5c-5918738e4a93",
+      email: "bob@example.com",
+      fullName: "Bob Jones",
+      createdAt: "2023-10-02T12:00:00Z"
+    }
+  ])
+  memory_insertMany(data: [
+    {
+      type: "Reflection",
+      createdAt: "2023-10-03T09:00:00Z",
+      title: "First day at work",
+      owner: {id: "71e54823-380d-4952-b866-990a424a7375"}
+    },
+    {
+      type: "Travel",
+      createdAt: "2023-10-04T15:00:00Z",
+      title: "Paris Trip",
+      owner: {id: "9c3c6f49-5564-4786-9a5c-5918738e4a93"}
+    }
+  ])
+}

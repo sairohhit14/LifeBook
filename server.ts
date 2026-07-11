@@ -5,8 +5,21 @@ import { createServer as createViteServer } from "vite";
 import { GoogleGenAI, Type } from "@google/genai";
 import dotenv from "dotenv";
 import nodemailer from "nodemailer";
+import { initializeApp, cert, getApps } from 'firebase-admin/app';
+import { getAuth } from 'firebase-admin/auth';
 
 dotenv.config();
+
+// Initialize Firebase Admin SDK safely using direct modular imports
+if (getApps().length === 0) {
+  initializeApp({
+    credential: cert({
+      projectId: process.env.FIREBASE_PROJECT_ID,
+      clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
+      privateKey: process.env.FIREBASE_PRIVATE_KEY?.replace(/\\n/g, '\n'),
+    }),
+  });
+}
 
 const app = express();
 const PORT = 3000;
@@ -355,47 +368,66 @@ function addNotification(userId: string, title: string, message: string, db?: an
 
 /* ================= AUTH ENDPOINTS ================= */
 
-app.post("/api/auth/register", (req, res) => {
+app.post("/api/auth/register", async (req, res) => {
   const { name, email, password, dob, phone } = req.body;
   if (!name || !email || !password || !dob) {
     return res.status(400).json({ error: "Missing required fields" });
   }
 
-  const db = readDb();
-  const existingUser = db.users.find((u: any) => u.email.toLowerCase() === email.toLowerCase());
-  if (existingUser) {
-    return res.status(400).json({ error: "Email is already registered" });
+  try {
+    // Create user in Firebase Auth using modular getAuth()
+    const auth = getAuth();
+    const userRecord = await auth.createUser({
+      email: email,
+      password: password,
+      displayName: name,
+    });
+
+    const userId = userRecord.uid;
+    const legacyKey = generateLegacyKey();
+    
+    // Store additional user data in local DB
+    const db = readDb();
+    const newUser = {
+      id: userId,
+      name,
+      email,
+      password, // Storing plaintext for lightweight hackathon purposes (can be BCrypt if needed, but local sandbox file is private)
+      dob,
+      phone: phone || "",
+      profilePhoto: "",
+      legacyKey,
+      createdAt: new Date().toISOString()
+    };
+
+    db.users.push(newUser);
+    addNotification(userId, "Welcome to LifeBook!", `Hello ${name}, welcome to your digital legacy space. Start logging memories, creating your biography, and sharing your custom Legacy Key: ${legacyKey} with your descendants.`);
+    writeDb(db);
+
+    res.status(201).json({
+      id: userId,
+      name,
+      email,
+      dob,
+      phone: newUser.phone,
+      legacyCompletion: 0,
+      profilePhoto: "",
+      legacyKey,
+      createdAt: newUser.createdAt
+    });
+  } catch (error: any) {
+    console.error("[Auth] Firebase registration error:", error);
+    if (error.code === 'auth/email-already-exists') {
+      return res.status(400).json({ error: "Email is already registered" });
+    }
+    if (error.code === 'auth/invalid-email') {
+      return res.status(400).json({ error: "Invalid email address" });
+    }
+    if (error.code === 'auth/weak-password') {
+      return res.status(400).json({ error: "Password is too weak" });
+    }
+    return res.status(500).json({ error: `Registration failed: ${error.message}` });
   }
-
-  const userId = `user_${Date.now()}_${Math.random().toString(36).substr(2, 5)}`;
-  const legacyKey = generateLegacyKey();
-  const newUser = {
-    id: userId,
-    name,
-    email,
-    password, // Storing plaintext for lightweight hackathon purposes (can be BCrypt if needed, but local sandbox file is private)
-    dob,
-    phone: phone || "",
-    profilePhoto: "",
-    legacyKey,
-    createdAt: new Date().toISOString()
-  };
-
-  db.users.push(newUser);
-  addNotification(userId, "Welcome to LifeBook!", `Hello ${name}, welcome to your digital legacy space. Start logging memories, creating your biography, and sharing your custom Legacy Key: ${legacyKey} with your descendants.`);
-  writeDb(db);
-
-  res.status(201).json({
-    id: userId,
-    name,
-    email,
-    dob,
-    phone: newUser.phone,
-    legacyCompletion: 0,
-    profilePhoto: "",
-    legacyKey,
-    createdAt: newUser.createdAt
-  });
 });
 
 app.post("/api/auth/login", (req, res) => {

@@ -21,6 +21,69 @@
       "profilePhoto": "",
       "legacyKey": "LB-TWXTRM",
       "createdAt": "2026-07-04T23:20:46.830Z"
+    },
+    {
+      "id": "user_1783215687298_dxanq",
+      "name": "rohit",
+      "email": "sairohit614@gmail.com",
+      "password": "sairohit",
+      "dob": "2006-02-19",
+      "phone": "+91 8712367466",
+      "profilePhoto": "",
+      "legacyKey": "LB-E0K5OL",
+      "createdAt": "2026-07-05T01:41:27.299Z",
+      "loginOtp": "879155",
+      "loginOtpExpiry": 1783525384056
+    },
+    {
+      "id": "user_1783524648779_wd1i8",
+      "name": "roshu",
+      "email": "sairohit190206@gmail.com",
+      "password": "roshu123",
+      "dob": "2006-01-30",
+      "phone": "+91 8712367466",
+      "profilePhoto": "",
+      "legacyKey": "LB-8F2GDD",
+      "createdAt": "2026-07-08T15:30:48.780Z",
+      "loginOtp": "873013",
+      "loginOtpExpiry": 1783525575539
+    },
+    {
+      "id": "user_1783525922388_b8s7c",
+      "name": "salman",
+      "email": "salmannandaram5@gmail.com",
+      "password": "salman123",
+      "dob": "2006-09-03",
+      "phone": "+91 8688272598",
+      "profilePhoto": "",
+      "legacyKey": "LB-2GSHM4",
+      "createdAt": "2026-07-08T15:52:02.388Z"
+    },
+    {
+      "id": "user_1783529160814_1l17f",
+      "name": "ABC",
+      "email": "rohit.kotta06@gmail.com",
+      "password": "rohit123",
+      "dob": "2006-02-19",
+      "phone": "+91 8712367466",
+      "profilePhoto": "",
+      "legacyKey": "LB-35FCZL",
+      "createdAt": "2026-07-08T16:46:00.814Z",
+      "loginOtp": "665403",
+      "loginOtpExpiry": 1783534756061
+    },
+    {
+      "id": "FJMXtneK11QkFgYMUC9amSBQ8fX2",
+      "name": "asd",
+      "email": "sairohitkotta@gmail.com",
+      "password": "sai123",
+      "dob": "2006-02-19",
+      "phone": "+91 8712367466",
+      "profilePhoto": "",
+      "legacyKey": "LB-JQXWMR",
+      "createdAt": "2026-07-08T17:40:15.633Z",
+      "loginOtp": "645344",
+      "loginOtpExpiry": 1783534512110
     }
   ],
   "memories": [
@@ -102,6 +165,24 @@
         }
       ],
       "createdAt": "2026-07-04T23:46:48.758Z"
+    },
+    {
+      "id": "mem_1783532935373_4g5p4",
+      "userId": "FJMXtneK11QkFgYMUC9amSBQ8fX2",
+      "title": "beach",
+      "description": "📸 [AI Memory Vision: A beautifully framed memory preserved for future generations to look back on with love.]",
+      "date": "2026-07-08",
+      "location": "vizag",
+      "tags": [],
+      "media": [
+        {
+          "id": "media_1783532921705_2b3o6",
+          "type": "image",
+          "url": "/uploads/file_1783532921674_um0kl.JPG",
+          "name": "DSC_2901.JPG"
+        }
+      ],
+      "createdAt": "2026-07-08T17:48:55.373Z"
     }
   ],
   "milestones": [
@@ -181,7 +262,49 @@
   ],
   "family": [],
   "documents": [],
-  "stories": [],
+  "stories": [
+    {
+      "id": "story_1783215349558_fallback",
+      "userId": "user_1783207246830_koawh",
+      "title": "bharath's Custom Memoir Book",
+      "biographyLength": "short",
+      "chapters": [
+        {
+          "title": "Chapter 1: Childhood & Roots",
+          "content": "This chapter marks the beautiful beginning of bharath's story, reflecting on early family origins, upbringing, and childhood roots. Preserved memories show a path filled with wonder and foundational growth."
+        },
+        {
+          "title": "Chapter 2: Educational Pursuits",
+          "content": "Education holds the key to expansion. This chapter highlights the intellectual curiosity and academic pathways traversed by bharath, leading to early passions and discoveries."
+        },
+        {
+          "title": "Chapter 3: Career Highlights & Professional Journey",
+          "content": "The professional path is more than just milestones; it is about dedication and purpose. Here, we outline bharath's accomplishments, leadership, and professional growth."
+        },
+        {
+          "title": "Chapter 4: Love, Family & Friendships",
+          "content": "No life is complete without the companion bonds that tether us to this earth. This section is dedicated to family relations, close friendships, and legacy connections."
+        },
+        {
+          "title": "Chapter 5: Defining Achievements & Crucial Lessons",
+          "content": "Crucial learnings and significant life breakthroughs. Reflecting on key victories that defined character and instilled deep pride."
+        },
+        {
+          "title": "Chapter 6: Personal Values & Philosophy",
+          "content": "A deep dive into the values that guide bharath: integrity, resilience, compassion, and a lifelong devotion to family preservation."
+        },
+        {
+          "title": "Chapter 7: Challenges Overcome",
+          "content": "Strength is forged in trial. This chapter records the obstacles and hardships faced along the journey, demonstrating bharath's powerful spirit and resilience."
+        },
+        {
+          "title": "Chapter 8: Future Vision & Legacy",
+          "content": "An everlasting vision for grandchildren, descendants, and the world. A beautiful summary of the legacy bharath continues to craft."
+        }
+      ],
+      "generatedAt": "2026-07-05T01:35:49.558Z"
+    }
+  ],
   "notifications": [],
   "chatHistory": {}
 }

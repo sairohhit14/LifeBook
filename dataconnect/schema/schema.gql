@@ -1,0 +1,47 @@
+type User @table {
+  email: String!
+  fullName: String!
+  createdAt: Timestamp!
+  birthDate: Date
+  bio: String
+}
+
+type Memory @table {
+  type: String!
+  createdAt: Timestamp!
+  title: String
+  description: String
+  aiSummary: String
+  mediaUrl: String
+  dateOccurred: Date
+  location: String
+  owner: User!
+}
+
+type LegacyMessage @table {
+  content: String!
+  recipientEmail: String!
+  status: String!
+  scheduledDate: Timestamp
+  unlockCondition: String
+  owner: User!
+}
+
+type FamilyMember @table {
+  name: String!
+  relationshipType: String!
+  birthDate: Date
+  deathDate: Date
+  profilePhotoUrl: String
+  relatedUserId: UUID
+  owner: User!
+}
+
+type Document @table {
+  title: String!
+  fileUrl: String!
+  sensitivityLevel: String!
+  expirationDate: Date
+  category: String
+  owner: User!
+}
